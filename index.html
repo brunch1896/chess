@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>证书中心</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            background-color: #fff;
+            position: relative;
+        }
+
+        .back-button {
+            font-size: 24px;
+            text-decoration: none;
+            color: #000;
+        }
+
+        .header-title {
+            flex-grow: 1;
+            text-align: center;
+            font-size: 18px;
+            margin-right: 24px;
+        }
+
+        .more-button {
+            font-size: 24px;
+            color: #000;
+        }
+
+        .status-bar {
+            display: flex;
+            justify-content: flex-end;
+            padding: 5px 10px;
+            background-color: #fff;
+            font-size: 12px;
+            color: #666;
+        }
+
+        .profile-section {
+            background-color: #ee4d2d;
+            color: white;
+            padding: 20px;
+        }
+
+        .profile-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .profile-image {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 15px;
+            border: 2px solid white;
+        }
+
+        .profile-details {
+            flex-grow: 1;
+        }
+
+        .profile-name {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .profile-id {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .certificate-level {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .level-text {
+            display: flex;
+            align-items: center;
+        }
+
+        .crown-icon {
+            color: #ffd700;
+            margin-right: 10px;
+        }
+
+        .check-button {
+            background-color: white;
+            color: #ee4d2d;
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 14px;
+            border: none;
+        }
+
+        .stats-section {
+            display: flex;
+            background-color: white;
+            padding: 20px 0;
+            margin-bottom: 20px;
+        }
+
+        .stat-item {
+            flex: 1;
+            text-align: center;
+            border-right: 1px solid #eee;
+        }
+
+        .stat-item:last-child {
+            border-right: none;
+        }
+
+        .stat-value {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .share-button {
+            background-color: #ee4d2d;
+            color: white;
+            width: 90%;
+            margin: 0 auto;
+            padding: 15px;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        .info-section {
+            background-color: #ee4d2d;
+            color: white;
+            padding: 20px;
+            margin: 0 20px;
+            border-radius: 10px;
+        }
+
+        .info-title {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .info-list {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+
+        .info-list li {
+            margin-bottom: 10px;
+        }
+
+        .qr-code {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .qr-text {
+            text-align: center;
+            font-size: 12px;
+            margin-top: 10px;
+        }
+
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+            background-color: white;
+            border-top: 1px solid #eee;
+        }
+
+        .nav-item {
+            font-size: 24px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="status-bar">
+        11:32 &nbsp;&nbsp; 1.10KB/s &nbsp;&nbsp; 5G &nbsp;&nbsp; 86%
+    </div>
+    
+    <div class="header">
+        <a href="#" class="back-button">×</a>
+        <div class="header-title">www.jt01.com</div>
+        <div class="more-button">...</div>
+    </div>
+
+    <div class="profile-section">
+        <div class="profile-info">
+            <img src="default-avatar.png" alt="Profile" class="profile-image">
+            <div class="profile-details">
+                <div class="profile-name">朱*鸿</div>
+                <div class="profile-id">1101**********051</div>
+            </div>
+        </div>
+
+        <div class="certificate-level">
+            <div class="level-text">
+                <span class="crown-icon">👑</span>
+                您当前的证书级别是：4段
+            </div>
+            <button class="check-button">立即查看</button>
+        </div>
+    </div>
+
+    <div class="stats-section">
+        <div class="stat-item">
+            <div class="stat-value">N</div>
+            <div class="stat-label">你已获得证书数量</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-value">N</div>
+            <div class="stat-label">你已参加赛事数量</div>
+        </div>
+    </div>
+
+    <button class="share-button">点击分享你的喜悦</button>
+
+    <div class="info-section">
+        <div class="info-title">登录北京市围棋协会／竞智网系统，</div>
+        <div class="info-list">
+            您可：
+            <ol>
+                <li>1、查询与确认棋手完整信息；</li>
+                <li>2、查询电子版证书；</li>
+                <li>3、鉴别证书真伪、查询证书使用方法；</li>
+                <li>4、查询个人升迁记录与赛场成绩；</li>
+                <li>5、获取更多晋级赛事信息。</li>
+            </ol>
+        </div>
+        <img src="qr-code.png" alt="QR Code" class="qr-code">
+        <div class="qr-text">使用微信，扫码或者长按识别<br>关注后登录</div>
+    </div>
+
+    <div class="bottom-nav">
+        <div class="nav-item">≡</div>
+        <div class="nav-item">⌂</div>
+        <div class="nav-item">⤶</div>
+    </div>
+</body>
+</html>
