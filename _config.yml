@@ -1,3 +1,5 @@
 title: Chess Certification Center
 description: A web interface for displaying chess certification information and status.
+baseurl: "/chess-certification"
+url: "https://brunch1896.github.io"
 theme: jekyll-theme-minimal
